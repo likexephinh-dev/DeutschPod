@@ -2,7 +2,19 @@ import { GoogleGenAI, Type } from "@google/genai";
 import { PodcastEpisode, Speaker } from "../types";
 import { base64ToUint8Array, decodeAudioData } from "../utils/audioUtils";
 
-const apiKey = process.env.API_KEY || '';
+// Safely retrieve API Key preventing "process is not defined" error in browsers
+const getApiKey = () => {
+  try {
+    if (typeof process !== "undefined" && process.env) {
+      return process.env.API_KEY || '';
+    }
+  } catch (e) {
+    console.warn("process.env is not accessible");
+  }
+  return '';
+};
+
+const apiKey = getApiKey();
 const ai = new GoogleGenAI({ apiKey });
 
 // Helper to generate a unique ID
