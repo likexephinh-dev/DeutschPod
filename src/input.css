@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+  }
+}
+
+@layer components {
+  /* Custom background shape overlay */
+  .bg-mesh-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-color: #f3f4f6;
+    background-image: 
+      radial-gradient(at 40% 20%, hsla(28,100%,74%,0.1) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, hsla(189,100%,56%,0.1) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, hsla(340,100%,76%,0.1) 0px, transparent 50%);
+    background-attachment: fixed;
+    pointer-events: none;
+  }
+
+  /* Custom scrollbar for transcript */
+  .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+  }
+  .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+  }
+}
