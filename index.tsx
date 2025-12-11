@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import './src/input.css'; // Import CSS so Vite/Tailwind processes it
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
