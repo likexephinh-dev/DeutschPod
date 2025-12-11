@@ -1,0 +1,5 @@
+{
+  "name": "GenAI Deutsch Pod",
+  "description": "Ein KI-gestützter Podcast-Generator zum Deutschlernen. Erstellen Sie benutzerdefinierte Episoden zu jedem Thema mit Audio, Transkripten und Vokabellisten.",
+  "requestFramePermissions": []
+}
